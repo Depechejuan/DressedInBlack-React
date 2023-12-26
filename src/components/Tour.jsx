@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import getTour from "../services/get-tour.js";
 import Loading from "./Loading.jsx";
 import Buttons from "./Edit-Delete-Btn.jsx";
-import CreateBtn from "./Create-btn.jsx";
+import CreateBtn from "./Create-Btn.jsx";
 
 
 const host = import.meta.env.VITE_API_HOST;
