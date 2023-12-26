@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import components and pages
 import ContactUs from "./pages/Contact-Us.jsx";
-import HomePage from './pages/Home-page';
+import HomePage from './pages/Home-Page.jsx';
 import NavBar from './components/Nav-bar';
 import TourPage from './pages/Tour-page';
 import EditPost from './forms/Edit-Post.jsx';
