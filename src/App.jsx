@@ -3,19 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import components and pages
 import ContactUs from "./pages/Contact-Us.jsx";
 import HomePage from './pages/Home-Page.jsx';
-import NavBar from './components/Nav-bar';
-import TourPage from './pages/Tour-page';
+import NavBar from './components/Nav-Bar.jsx';
+import TourPage from './pages/Tour-Page.jsx';
 import EditPost from './forms/Edit-Post.jsx';
 import RiderPage from './pages/Rider.jsx';
 import Banner from './components/Banner.jsx';
-import UniquePost from './components/Unique-post';
+import UniquePost from './components/Unique-Post.jsx';
 // import Slider from './components/Slider';
 
 // import utilities
 // import { SliderIMG } from './components/Images-slider';
-import LoginPage from './pages/Login-page';
-import PostForm from './forms/Post-Form';
-import AboutPage from './pages/About';
+import LoginPage from './pages/Login-Page.jsx';
+import PostForm from './forms/Post-Form.jsx';
+import AboutPage from './pages/About.jsx';
 import TourForm from './forms/Tour-Form.jsx';
 
 
