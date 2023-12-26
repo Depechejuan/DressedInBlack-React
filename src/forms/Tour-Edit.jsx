@@ -1,9 +1,9 @@
 import {useState, useEffect, useRef} from "react"
 import {useNavigate} from "react-router-dom"
 
-import getToken from "../services/token/get-token"
-import sendPhoto from "../services/send-photos";
-import editTour from "../services/edit-tour";
+import getToken from "../services/token/get-token.js"
+import sendPhoto from "../services/send-photos.js";
+import editTour from "../services/edit-tour.js";
 
 function EditTourForm({ tourData, id }) {
     const [tourName, setTourName] = useState('');

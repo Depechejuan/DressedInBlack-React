@@ -1,8 +1,8 @@
 import {useState, useEffect} from "react";
 import { Link, useNavigate } from "react-router-dom";
-import getToken from "../services/token/get-token";
-import getUserToken from "../services/token/get-user-token";
-import deleteToken from "../services/token/delete-token";
+import getToken from "../services/token/get-token.js";
+import getUserToken from "../services/token/get-user-token.js";
+import deleteToken from "../services/token/delete-token.js";
 
 function Menu({isMenuOpen}) {
     const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import UserDetail from "../components/User-Detail";
+import UserDetail from "../components/User-Detail.jsx";
 
 function AboutPage() {
     return (

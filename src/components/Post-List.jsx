@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import getAllPost from "../services/get-all-posts";
-import Loading from "./Loading";
-import Dates from "./Dates";
+import getAllPost from "../services/get-all-posts.js";
+import Loading from "./Loading.jsx";
+import Dates from "./Dates.jsx";
 
 const host = import.meta.env.VITE_API_HOST;
 

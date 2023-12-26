@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom"; 
 import { useState, useEffect, useRef } from 'react';
 
-import getToken from "../services/token/get-token";
-import createNewPost from "../services/create-post";
-import sendPhoto from "../services/send-photos";
+import getToken from "../services/token/get-token.js";
+import createNewPost from "../services/create-post.js";
+import sendPhoto from "../services/send-photos.j";
 
     function PostForm() {
         const [title, setTitle] = useState('');

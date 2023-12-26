@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import getTour from "../services/get-tour";
-import Loading from "./Loading";
-import Buttons from "./Edit-delete-btn";
-import CreateBtn from "./Create-btn";
+import getTour from "../services/get-tour.js";
+import Loading from "./Loading.jsx";
+import Buttons from "./Edit-delete-btn.jsx";
+import CreateBtn from "./Create-btn.jsx";
 
 
 const host = import.meta.env.VITE_API_HOST;

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import getUniqueTour from "../services/get-unique-tour";
-import EditTourForm from "../forms/Tour-Edit";
-import getToken from "../services/token/get-token";
-import deleteUniquePhoto from "../services/delete-unique-photo";
+import getUniqueTour from "../services/get-unique-tour.js";
+import getToken from "../services/token/get-token.js";
+import deleteUniquePhoto from "../services/delete-unique-photo.js";
+import EditTourForm from "../forms/Tour-Edit.jsx";
 
 const host = import.meta.env.VITE_API_HOST;
 

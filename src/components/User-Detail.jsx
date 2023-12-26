@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import getUser from "../services/get-user";
-import Loading from "./Loading";
-import Divider from "./Divider";
+import getUser from "../services/get-user.js";
+import Loading from "./Loading.jsx";
+import Divider from "./Divider.jsx";
 
 const host = import.meta.env.VITE_API_HOST;
 

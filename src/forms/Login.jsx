@@ -1,7 +1,7 @@
 import { useState } from "react";
-import sendLogin from "../services/send-login";
-import saveToken from "../services/token/save-token";
 import { useNavigate } from "react-router-dom"; 
+import sendLogin from "../services/send-login.js";
+import saveToken from "../services/token/save-token.js";
 
 function LoginForm() {
     const [formData, setFormData] = useState({

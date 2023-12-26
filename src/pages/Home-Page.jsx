@@ -1,7 +1,7 @@
     import { Link } from "react-router-dom";
-import CreateBtn from "../components/Create-btn";
-    import PostList from "../components/Post-list";
-    import getToken from "../services/token/get-token";
+    import CreateBtn from "../components/Create-Btn.jsx";
+    import PostList from "../components/Post-List.jsx";
+    import getToken from "../services/token/get-token.js";
 
 
     function HomePage() {

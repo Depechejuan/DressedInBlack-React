@@ -1,4 +1,4 @@
-import Tour from "../components/Tour";
+import Tour from "../components/Tour.jsx";
 
 
 function TourPage() {

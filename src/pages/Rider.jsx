@@ -1,5 +1,5 @@
 import logo from "../assets/logo/logo-contact.jpg"
-import ContactCard from "../components/Contact-Card";
+import ContactCard from "../components/Contact-Card.jsx";
 
 function RiderPage() {
 

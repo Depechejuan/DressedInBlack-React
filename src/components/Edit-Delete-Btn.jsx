@@ -1,6 +1,6 @@
-import deleteEntry from "../services/delete-entry";
-import getToken from "../services/token/get-token";
 import { useNavigate } from "react-router-dom";
+import deleteEntry from "../services/delete-entry.js";
+import getToken from "../services/token/get-token.js";
 
 function Buttons({id, type}) {
     const token = getToken();

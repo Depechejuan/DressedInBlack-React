@@ -1,4 +1,4 @@
-import LoginForm from "../forms/login";
+import LoginForm from "../forms/Login.jsx";
 
 
 function LoginPage() {

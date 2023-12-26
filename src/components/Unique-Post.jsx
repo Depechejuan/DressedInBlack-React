@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Loading from "./Loading";
-import getUniquePost from "../services/get-unique-post";
-import getToken from "../services/token/get-token";
-import Dates from "./Dates";
-import EditPost from "../forms/Edit-Post";
-import deleteUniquePhoto from "../services/delete-unique-photo";
+import getUniquePost from "../services/get-unique-post.js";
+import getToken from "../services/token/get-token.js";
+import deleteUniquePhoto from "../services/delete-unique-photo.jsx";
+import Dates from "./Dates.jsx";
+import EditPost from "../forms/Edit-Post.jsx";
+import Loading from "./Loading.jsx";
 
 const host = import.meta.env.VITE_API_HOST;
 

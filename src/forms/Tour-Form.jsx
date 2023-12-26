@@ -1,9 +1,9 @@
 import {useState, useEffect, useRef} from "react"
 import {useNavigate} from "react-router-dom"
 
-import createNewTour from "../services/create-tour";
-import getToken from "../services/token/get-token"
-import sendPhoto from "../services/send-photos";
+import createNewTour from "../services/create-tour.js";
+import getToken from "../services/token/get-token.js"
+import sendPhoto from "../services/send-photos.js";
 
 function TourForm() {
     const [tourName, setTourName] = useState('');

@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-import getToken from "../services/token/get-token";
-import editPost from "../services/edit-post";
-import sendPhoto from "../services/send-photos";
+import getToken from "../services/token/get-token.js";
+import editPost from "../services/edit-post.js";
+import sendPhoto from "../services/send-photos.js";
 
 const host = import.meta.env.VITE_API_HOST;
 
