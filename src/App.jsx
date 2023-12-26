@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // import components and pages
-import ContactUs from "./pages/Contact-us.jsx";
+import ContactUs from "./pages/Contact-Us.jsx";
 import HomePage from './pages/Home-page';
 import NavBar from './components/Nav-bar';
 import TourPage from './pages/Tour-page';
