@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 
 import getToken from "../services/token/get-token.js";
 import createNewPost from "../services/create-post.js";
-import sendPhoto from "../services/send-photos.j";
+import sendPhoto from "../services/send-photos.js";
 
     function PostForm() {
         const [title, setTitle] = useState('');
