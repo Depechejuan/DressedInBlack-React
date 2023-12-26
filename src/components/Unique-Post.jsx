@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import getUniquePost from "../services/get-unique-post.js";
 import getToken from "../services/token/get-token.js";
-import deleteUniquePhoto from "../services/delete-unique-photo.jsx";
+import deleteUniquePhoto from "../services/delete-unique-photo.js";
 import Dates from "./Dates.jsx";
 import EditPost from "../forms/Edit-Post.jsx";
 import Loading from "./Loading.jsx";
