@@ -11,6 +11,7 @@ async function sendNewsLetter(payload) {
             body: JSON.stringify(payload),
         });
         const body = await response.json();
+        console.log(body);
         if (!response.ok) {
             throw new Error("Something Went Wrong");
         }

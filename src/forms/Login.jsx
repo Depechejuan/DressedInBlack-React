@@ -51,7 +51,6 @@ function LoginForm() {
                     onChange={handleChange}
                     required
                 />
-
                 <button type="submit" className="form-btn">
                     Log in
                 </button>

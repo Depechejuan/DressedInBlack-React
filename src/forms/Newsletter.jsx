@@ -1,16 +1,32 @@
 import { useState } from 'react';
 import newsTokken from '../services/token/newsletter-token';
+import tempToken from '../services/token/temp-nl-token';
+import getNewsToken from '../services/token/get-news-token';
+import sendNewsLetter from '../services/send-newsletter';
 
 function Newsletter() {
     const [showComponent, setShowComponent] = useState(true);
+    const [formData, setFormData] = useState({
+        email: '',
+        city: ''
+    })
 
-    
+    const checkStatus = getNewsToken();
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }))
+    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await sendNewsLetter();
+            await sendNewsLetter(formData);
             newsTokken();
+            handleHideButton();
         } catch (err) {
             console.error(err);
         }
@@ -18,7 +34,7 @@ function Newsletter() {
 
     const handleHideButton = () => {
         console.log("Hide")
-
+        tempToken();
         setShowComponent(false);
     };
     
@@ -26,9 +42,12 @@ function Newsletter() {
         return null;
     }
 
+    const mostrarComponente = checkStatus === null || checkStatus === undefined;
 
     return (
-        <section className="suscribe">
+        <>
+        {mostrarComponente &&
+            <section className="suscribe">
             <form className="newsletter" method="post" onSubmit={handleSubmit}>
                 <button type="submit" className="ocultar-btn" onClick={handleHideButton} >
                     Ocultar
@@ -39,11 +58,15 @@ function Newsletter() {
                         type="text"
                         name="email"
                         placeholder="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         required={!showComponent} 
                     />
                     <input 
                         type="text"
                         name="city"
+                        value={formData.city}
+                        onChange={handleChange}
                     />
                     <button type="submit" className="form-btn">
                         Suscribirse
@@ -51,7 +74,10 @@ function Newsletter() {
                 </div>
             </form>
         </section>
-    )
+        }
+        </>
+    );
+
 }
 
 export default Newsletter;
