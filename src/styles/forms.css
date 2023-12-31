@@ -16,6 +16,23 @@ form {
     border-image: linear-gradient(#fcc23f, #171618);
     border-image-slice: 1;
     width: 100%;
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    width: 50%;
+}
+
+.newsletter input {
+    flex-direction: row;
+    width: 30%;
+    margin-left: 10px;
+}
+
+.suscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 input,
@@ -146,7 +163,7 @@ textarea {
 */
 
 .add-button {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -156,11 +173,20 @@ textarea {
 }
 
 .remove-button {
-    background-color: #ff5733; /* Rojo */
+    background-color: #ff5733;
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ocultar-btn {
+    background-color: #b5542b;
+    color: white;
+    border: none;
+    margin-left: auto;
     cursor: pointer;
     border-radius: 5px;
 }

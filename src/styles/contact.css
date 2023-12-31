@@ -77,6 +77,10 @@
     color: inherit;
 }
 
+.account {
+    text-align: center;
+}
+
 @media screen and (min-width: 350px) {
     .contact-data {
         font-size: 0.7rem;
