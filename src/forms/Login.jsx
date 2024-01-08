@@ -29,8 +29,6 @@ function LoginForm() {
         }
     }
 
-
-
     return(
         <section className="form">
             <form className="login-form" method="post" onSubmit={handleSubmit}>

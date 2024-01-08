@@ -1,4 +1,4 @@
-function Modal({link}) {
+function ModalPictures({link}) {
 
     return(
         <div className="modal">
@@ -11,4 +11,4 @@ function Modal({link}) {
     )
 }
 
-export default Modal;
+export default ModalPictures;

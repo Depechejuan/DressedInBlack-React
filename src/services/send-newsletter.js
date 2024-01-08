@@ -1,7 +1,8 @@
 const host = import.meta.env.VITE_API_HOST;
 
 async function sendNewsLetter(payload) {
-    // hacer endpoint
+    console.log(payload);
+
     try {
         const response = await fetch(`${host}/newsletter`, {
             method: "POST",
