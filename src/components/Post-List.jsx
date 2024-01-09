@@ -4,7 +4,6 @@ import getAllPost from "../services/get-all-posts.js";
 import Loading from "./Loading.jsx";
 import Dates from "./Dates.jsx";
 
-const host = import.meta.env.VITE_API_HOST;
 
 function PostList() {
     const [posts, setPosts] = useState([]);
@@ -50,7 +49,7 @@ function PostList() {
                             image !== null ? (
                                 <img
                                     key={image.id}
-                                    src={`${host}${image}`}
+                                    src={`https://drive.google.com/uc?export=view&id=${image}`}
                                     alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                     className="every-post-image"
                                 />

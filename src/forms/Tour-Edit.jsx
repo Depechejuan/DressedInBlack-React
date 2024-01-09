@@ -89,7 +89,6 @@ function EditTourForm({ tourData, id }) {
                 }
 
                 if (photos.length > 0) {
-                    console.log("cumple este if");
                     const photosSended = await sendPhoto(type, idTour, photos, token);
                     console.log(photosSended);
                     if (photosSended.success == true) {
@@ -159,7 +158,6 @@ function EditTourForm({ tourData, id }) {
             <h3 className="create-tour-date">
                 Tour
             </h3>
-            {console.log(tourName)}
             <input 
                 type="text"
                 name="tourName"

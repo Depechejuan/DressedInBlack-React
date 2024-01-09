@@ -6,8 +6,6 @@ import Buttons from "./Edit-Delete-Btn.jsx";
 import CreateBtn from "./Create-Btn.jsx";
 
 
-const host = import.meta.env.VITE_API_HOST;
-
 function Tour() {
     const [tour, setTour] = useState([]);
     const [expandedEntries, setExpandedEntries] = useState([]);
@@ -95,7 +93,7 @@ function Tour() {
                                                         image !== null ? (
                                                         <img
                                                             key={image.id}
-                                                            src={`${host}${image}`}
+                                                            src={`https://drive.google.com/uc?export=view&id=${image}`}
                                                             alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                                             className="every-post-image"
                                                         />

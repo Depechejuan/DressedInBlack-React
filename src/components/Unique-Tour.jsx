@@ -5,7 +5,6 @@ import getToken from "../services/token/get-token.js";
 import deleteUniquePhoto from "../services/delete-unique-photo.js";
 import EditTourForm from "../forms/Tour-Edit.jsx";
 
-const host = import.meta.env.VITE_API_HOST;
 
 function UniqueTour() {
     const [tour, setTour] = useState({});
@@ -66,7 +65,7 @@ function UniqueTour() {
                             <>
                                 <img
                                     key={image.id}
-                                    src={`${host}${image}`}
+                                    src={`https://drive.google.com/uc?export=view&id=${image}`}
                                     alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                     className="every-post-image"
                                 />
@@ -85,7 +84,6 @@ function UniqueTour() {
                     <></>
                 )}
             </div>
-            {console.log(tour)}
             <div className="tour-video">
                 {tour.videoURL && tour.videoURL.length > 0 ? (
                     tour.videoURL.map((url) => (
