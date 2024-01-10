@@ -4,12 +4,14 @@ import getTour from "../services/get-tour.js";
 import Loading from "./Loading.jsx";
 import Buttons from "./Edit-Delete-Btn.jsx";
 import CreateBtn from "./Create-Btn.jsx";
+import getToken from "../services/token/get-token.js";
 
 
 function Tour() {
     const [tour, setTour] = useState([]);
     const [expandedEntries, setExpandedEntries] = useState([]);
 
+    const token = getToken();
     useEffect(()=>{
         async function fetchTour() {
             try {
@@ -54,9 +56,11 @@ function Tour() {
         <section className="tour-container">
             <h2>Dressed In Black Tour History</h2>
             <article className="tour-details">
-            <Link to="/dibtour">
-                <CreateBtn method={'Tour'} />
-            </Link>
+                {token &&
+                    <Link to="/dibtour">
+                        <CreateBtn method={'Tour'} />
+                    </Link>
+                }
                 <ul className="tour-full">
                     {Object.keys(tourByNames).map((tourName) => (
                         <li key={tourName}>
