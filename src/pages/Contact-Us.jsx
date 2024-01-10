@@ -12,7 +12,7 @@ function ContactUs() {
             <br />
             <ContactCard />
             {token ? (
-                null
+                <p><Link to="/newsletter">Enviar una NewsLetter</Link></p>
             ) : (
                 <p className="account">¿Tienes cuenta? <Link to="/diblog">Log-In</Link></p>
             )}

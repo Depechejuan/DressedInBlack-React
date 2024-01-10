@@ -4,9 +4,6 @@ import tempToken from '../services/token/temp-nl-token';
 import getNewsToken from '../services/token/get-news-token';
 import sendNewsLetter from '../services/send-newsletter';
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
 
 function Newsletter() {
     const [showComponent, setShowComponent] = useState(true);
@@ -14,10 +11,7 @@ function Newsletter() {
         email: '',
         city: ''
     })
-    
     const checkStatus = getNewsToken();
-
-
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -52,18 +46,6 @@ function Newsletter() {
 
     return (
         <>
-            <ToastContainer
-                position="top-center"
-                autoClose={3000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="colored"
-            />
             {mostrarComponente &&
                 <section className="suscribe">
                 <form className="newsletter" method="post" onSubmit={handleSubmit}>
@@ -93,7 +75,6 @@ function Newsletter() {
                 </form>
             </section>
             }
-
         </>
     );
 

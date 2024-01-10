@@ -57,9 +57,7 @@ import sendPhoto from "../services/send-photos.js";
                 let photos = selectedPhotos;
                 setSubmitting(true);
                 setSubmitting('Enviando...');
-
                 const response = await createNewPost(newPost, token);
-
                 if (response.success == true) {
                     const idPost = response.data.id;
                     const type = "dibposts";

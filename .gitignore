@@ -3,3 +3,5 @@ package-lock.json
 .env
 public
 dist
+.react-email
+react-email
