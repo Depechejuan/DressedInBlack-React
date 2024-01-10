@@ -12,7 +12,6 @@ function Buttons({id, type}) {
 
     const handleDeleteClick = async () => {
         try {
-            console.log(type, id, token);
             await deleteEntry(type, id, token);
         } catch (err) {
             console.error(err);

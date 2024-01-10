@@ -90,11 +90,10 @@ function EditTourForm({ tourData, id }) {
 
                 if (photos.length > 0) {
                     const photosSended = await sendPhoto(type, idTour, photos, token);
-                    console.log(photosSended);
                     if (photosSended.success == true) {
                         navigate(`/tour`);
                     } else {
-                        console.log("Error sending photo:", photosSended.error);
+                        console.error("Error sending photo:", photosSended.error);
                     }
                 }
                 navigate(`/tour`);

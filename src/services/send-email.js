@@ -15,10 +15,9 @@ async function sendMail(fullMail) {
         }
 
         const data = await response.json();
-        console.log(data);
         return data;
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }
 

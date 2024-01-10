@@ -27,7 +27,6 @@ function UniquePost() {
         }
         fetchPost();
     }, [id]);
-    console.log(post);
 
     function deletePhoto(type, idType, image, token) {
         deleteUniquePhoto("post", post.data.id, image, token)

@@ -30,20 +30,16 @@ function Newsletter() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const send = await sendNewsLetter(formData);
+            await sendNewsLetter(formData);
             newsTokken();
             handleHideButton();
-            console.log(send.data.status);
-            if(send.data.status == 200) {
-                console.log("Bien!");
-            }
+
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
     }
 
     const handleHideButton = () => {
-        console.log("Hide")
         tempToken();
         setShowComponent(false);
     };

@@ -76,8 +76,6 @@ const EditPost = ({ id, data, onHide, updatePost, post }) => {
             if (photos.length > 0) {
             await sendPhoto(type, id, photos, token);
             }
-            console.log(newPost);
-            console.log("Ocultar el edit");
             onHide();
         }
         

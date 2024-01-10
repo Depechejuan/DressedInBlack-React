@@ -63,11 +63,8 @@ import sendPhoto from "../services/send-photos.js";
                 if (response.success == true) {
                     const idPost = response.data.id;
                     const type = "dibposts";
-                    console.log("idPost");
                     if (photos.length > 0) {
-                        console.log("Hay fotos");
-                        const photosSended = await sendPhoto(type, idPost, photos, token);
-                        console.log(photosSended);
+                        await sendPhoto(type, idPost, photos, token);
                     }
                     navigate(`/posts/${response.data.id}`)
                 }

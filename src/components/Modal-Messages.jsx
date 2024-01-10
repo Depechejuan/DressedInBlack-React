@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import "../styles/modal.css"
 
 function ModalMessages({type, visible}) {
-    console.log("Modal Called");
     const [modalVisible, setModalVisible] = useState(visible);
     const closeModal = () => {
         setModalVisible(false);

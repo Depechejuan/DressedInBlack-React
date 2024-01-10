@@ -2,8 +2,7 @@ const host = import.meta.env.VITE_API_HOST;
 
 const deleteUniquePhoto = async (type, idType, image, token) => {
     const url = `${host}/${type}/${idType}/${image}`;
-    console.log(url);
-    console.log(image);
+
     try {
         const response = await fetch(`${url}`, {
             method: "DELETE",
@@ -18,7 +17,7 @@ const deleteUniquePhoto = async (type, idType, image, token) => {
         }
         return body;
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 };
 
