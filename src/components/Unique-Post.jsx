@@ -29,8 +29,8 @@ function UniquePost() {
     }, [id]);
     console.log(post);
 
-    function deletePhoto(idPhoto) {
-        deleteUniquePhoto(idPhoto, token)
+    function deletePhoto(type, idType, image, token) {
+        deleteUniquePhoto("post", post.data.id, image, token)
     }
 
     const handleEditClick = () => {
@@ -78,7 +78,7 @@ function UniquePost() {
                                 {token && (
                                     <button
                                         className="delete-photo-button"
-                                        onClick={() => deletePhoto(image)}
+                                        onClick={() => deletePhoto("post", post.data.id, image, token)}
                                     >
                                         X
                                     </button>

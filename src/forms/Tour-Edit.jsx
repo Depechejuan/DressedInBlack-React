@@ -260,7 +260,7 @@ function EditTourForm({ tourData, id }) {
                     onClick={(e) => {
                         e.stopPropagation()
                 }}>
-                    {submitting ? 'Submitted' : 'Create'}
+                    {submitting ? 'Submitted' : 'Edit'}
                 </button>
                 <button
                     type="button"

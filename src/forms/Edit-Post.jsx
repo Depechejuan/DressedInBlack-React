@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import getToken from "../services/token/get-token.js";
 import editPost from "../services/edit-post.js";
 import sendPhoto from "../services/send-photos.js";
+import deleteEntry from "../services/delete-entry.js";
 
 const host = import.meta.env.VITE_API_HOST;
 
@@ -92,7 +93,8 @@ const EditPost = ({ id, data, onHide, updatePost, post }) => {
         fileInputRef.current.value = "";
         setSelectedPhotos([]);
         setLoading(true);
-        setCancelling("Canceled");
+        setCancelling("Deleting");
+        deleteEntry("post",id, token)
     
         setTimeout(() => {
             setCancelling("");
@@ -207,7 +209,7 @@ const EditPost = ({ id, data, onHide, updatePost, post }) => {
                 <button
                 type="button" onClick={handleCancel}
                 className={`cancel-button ${cancelling ? 'canceled' : ''}`}>
-                    {cancelling ? 'Cancelled' : 'Cancel'}
+                    {cancelling ? 'Deleting' : 'Delete'}
                 </button>
             </div>
         </form>

@@ -10,8 +10,6 @@ function Buttons({id, type}) {
         navigate(`/tour/${id}`)
     };
 
-
-
     const handleDeleteClick = async () => {
         try {
             console.log(type, id, token);

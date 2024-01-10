@@ -2,8 +2,6 @@ const host = import.meta.env.VITE_API_HOST;
 
 const deleteEntry = async (type, id, token) => {
     try {
-        console.log(type);
-        console.log(id);
         const response = await fetch(`${host}/${type}/${id}`, {
             method: "DELETE",
             headers: {

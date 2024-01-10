@@ -23,8 +23,8 @@ function UniqueTour() {
         fetchTour();
     }, [id]);
 
-    function deletePhoto(idPhoto) {
-        deleteUniquePhoto(idPhoto, token)
+    function deletePhoto(type, idType, image, token) {
+        deleteUniquePhoto("tour", type, image, token)
     }
 
     function getVideoId(url) {
@@ -72,7 +72,7 @@ function UniqueTour() {
                                 {token && (
                                     <button
                                         className="delete-photo-button"
-                                        onClick={() => deletePhoto(image)}
+                                        onClick={() => deletePhoto("tour", tour.id, image, token)}
                                     >
                                         X
                                     </button>
