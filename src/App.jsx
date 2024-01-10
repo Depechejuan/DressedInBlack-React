@@ -34,14 +34,14 @@ import "./styles/contact.css"
 import "./styles/rider.css"
 import "./styles/tour.css"
 import "./styles/videos.css"
-import Alert from './components/Alert.tsx';
+// import Alert from './components/Alert.tsx';
 
 
 function App() {
 
   return (
     <Router>
-        <Alert>Alert</Alert>
+        {/* <Alert>Alert</Alert> */}
       <Banner />
       {/* <Slider slides={SliderIMG}/> */}
       <Menu />
