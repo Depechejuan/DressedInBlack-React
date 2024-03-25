@@ -29,6 +29,9 @@ function UserDetail() {
         https://drive.google.com/uc?export=view&id=${u.avatarURL}
 
         https://drive.google.com/uc?export=view&id=1O_SDEUqqE0guakDqkRCQ9f-aGxP593dq
+
+        you recieve it like:
+        https://drive.google.com/file/d/1O_SDEUqqE0guakDqkRCQ9f-aGxP593dq/view?usp=drive_link
     */
     return(
         <>
