@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import getUser from "../services/get-user.js";
 import Loading from "./Loading.jsx";
 import Divider from "./Divider.jsx";
-
+const host = import.meta.env.VITE_API_HOST;
 
 function UserDetail() {
     const [user, setUser] = useState(null);
@@ -23,16 +23,7 @@ function UserDetail() {
     if (user === null) {
         return <Loading />
     }
-    /*
-        get avatarURL = 1O_SDEUqqE0guakDqkRCQ9f-aGxP593dq
-        make it look like:
-        https://drive.google.com/uc?export=view&id=${u.avatarURL}
 
-        https://drive.google.com/uc?export=view&id=1O_SDEUqqE0guakDqkRCQ9f-aGxP593dq
-
-        you recieve it like:
-        https://drive.google.com/file/d/1O_SDEUqqE0guakDqkRCQ9f-aGxP593dq/view?usp=drive_link
-    */
     return(
         <>
         {user.data.map(u => (
@@ -42,7 +33,7 @@ function UserDetail() {
                     {u.realName}
                 </h4>
                 <figure className={`figure-${u.userName} figure-user`}>
-                    <img className={`user-photo-${u.userName} user-img`} src={`https://drive.google.com/uc?export=view&id=${u.avatarURL}`} alt={u.realName}></img>
+                    <img className={`user-photo-${u.userName} user-img`} src={`${host}/${u.avatarURL}`} alt={u.realName}></img>
                     <p className={`user-city-age city-${u.userName}`}>{u.city}</p>
                 </figure>
                 <section className={`user-info-${u.userName} user-section`}>

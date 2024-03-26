@@ -5,7 +5,7 @@ import Loading from "./Loading.jsx";
 import Buttons from "./Edit-Delete-Btn.jsx";
 import CreateBtn from "./Create-Btn.jsx";
 import getToken from "../services/token/get-token.js";
-
+const host = import.meta.env.VITE_API_HOST;
 
 function Tour() {
     const [tour, setTour] = useState([]);
@@ -97,7 +97,7 @@ function Tour() {
                                                         image !== null ? (
                                                         <img
                                                             key={image.id}
-                                                            src={`https://drive.google.com/uc?export=view&id=${image}`}
+                                                            src={`${host}/${image}`}
                                                             alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                                             className="every-post-image"
                                                         />

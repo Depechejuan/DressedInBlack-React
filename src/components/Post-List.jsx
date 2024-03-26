@@ -4,6 +4,7 @@ import getAllPost from "../services/get-all-posts.js";
 import Loading from "./Loading.jsx";
 import Dates from "./Dates.jsx";
 
+const host = import.meta.env.VITE_API_HOST;
 
 function PostList() {
     const [posts, setPosts] = useState([]);
@@ -34,6 +35,7 @@ function PostList() {
         return null;
     }
 
+
     return(
         <section className="post-list">
             {posts.data.map(post => (
@@ -44,21 +46,22 @@ function PostList() {
                     <Dates date={post.createdAt} />
                     <p className="post-description">{post.description}</p>
                     <div className="image-container">
-                        {post.imageURL.some((image) => image !== null) ? (
-                        post.imageURL.map((image) =>
-                            image !== null ? (
-                                <img
-                                    key={image.id}
-                                    src={`https://drive.google.com/uc?export=view&id=${image}`}
-                                    alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
-                                    className="every-post-image"
-                                />
-                            ) : null
-                        )
+                        {post && post.imageURL.some((image) => image !== null) ? (
+                            post.imageURL.map((image) =>
+                                image !== null ? (
+                                    <img
+                                        key={image.id}
+                                        src={`${host}/${image}`}
+                                        alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
+                                        className="every-post-image"
+                                    />
+                                ) : null
+                            )
                         ) : (
-                        <></>
+                            <></>
                         )}
                     </div>
+
 
                     <div className="tour-video">
                         {post.videoURL && post.videoURL.length > 0 ? (
