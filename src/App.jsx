@@ -12,6 +12,7 @@ import UniquePost from './components/Unique-Post.jsx';
 import UniqueTour from './components/Unique-Tour.jsx';
 import Video from './pages/Video.jsx';
 import Menu from './components/Menu.jsx';
+import LinkTree from './components/LinkTree.jsx';
 
 // import forms
 import LoginPage from './pages/Login-Page.jsx';
@@ -32,6 +33,8 @@ import "./styles/contact.css"
 import "./styles/rider.css"
 import "./styles/tour.css"
 import "./styles/videos.css"
+import "./styles/linktree.css"
+import "./styles/modal.css"
 
 function App() {
   return (
@@ -50,6 +53,7 @@ function App() {
           <Route path="/rider" element={<RiderPage />}></Route>
           <Route path="/tour/:id" element={<UniqueTour />}></Route>
           <Route path="/video" element={<Video />}></Route>
+          <Route path="/linktree" element={<LinkTree />}></Route>
           {/* Routes to Forms*/}
           <Route path="/diblog" element={<LoginPage />}></Route>
           <Route path="/dibposts" element={<PostForm />}></Route>

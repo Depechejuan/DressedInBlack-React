@@ -1,0 +1,47 @@
+.LinkTree {
+    margin: 0 auto;
+    padding: 1.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente */
+}
+
+.btnStack {
+    width: 80%;
+    max-width: 400px;
+    white-space: normal;
+    background-color: #7d7373;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 0.5rem auto;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 3px solid #888;
+    border-radius: 9px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    overflow-wrap: break-word;
+    height: auto;
+    white-space: normal;
+}
+
+a.btnStack:hover {
+    background-color: rgba(165, 157, 139, 0.8);
+    color: #000;
+    border: 3px solid #90eda2;
+}
+
+.disclaimer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

@@ -55,11 +55,11 @@
     overflow: hidden;
 }
 
-.image-container img,
+.image-container > img,
 .tour-video iframe {
     display: flex;
     min-width: 250px;
-    height: 250px;
+    height: 180px;
     align-self: center;
     object-fit: contain;
     justify-content: space-evenly;

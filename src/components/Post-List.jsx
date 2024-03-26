@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import getAllPost from "../services/get-all-posts.js";
 import Loading from "./Loading.jsx";
 import Dates from "./Dates.jsx";
+import ImageModal from './Image-Modal.jsx'; 
 
 const host = import.meta.env.VITE_API_HOST;
 
 function PostList() {
     const [posts, setPosts] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImageUrl, setSelectedImageUrl] = useState('');
 
     useEffect(() => {
         async function fetchPosts() {
@@ -20,6 +23,14 @@ function PostList() {
         }
         fetchPosts();
     }, []);
+
+    const handleImageClick = (imageUrl) => {
+        setSelectedImageUrl(imageUrl);
+        setModalIsOpen(true);
+        console.log(selectedImageUrl);
+        console.log(modalIsOpen);
+    };
+
     
     if (posts.length === 0) {
         return <Loading />
@@ -54,12 +65,18 @@ function PostList() {
                                         src={`${host}/${image}`}
                                         alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                         className="every-post-image"
-                                    />
+                                        onClick={() => handleImageClick(`${host}/${image}`)}
+                                />
                                 ) : null
                             )
                         ) : (
                             <></>
                         )}
+                        <ImageModal
+                            isOpen={modalIsOpen}
+                            closeModal={() => setModalIsOpen(false)}
+                            imageUrl={selectedImageUrl}
+                        />
                     </div>
 
 
