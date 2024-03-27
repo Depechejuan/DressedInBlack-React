@@ -7,12 +7,15 @@ import deleteUniquePhoto from "../services/delete-unique-photo.js";
 import Dates from "./Dates.jsx";
 import EditPost from "../forms/Edit-Post.jsx";
 import Loading from "./Loading.jsx";
+import ImageModal from './Image-Modal.jsx'; 
 
 const imgHost = import.meta.env.VITE_IMG_HOST;
 
 function UniquePost() {
     const [post, setPost] = useState({});
     const [isEditPostVisible, setIsEditPostVisible] = useState(false);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImageUrl, setSelectedImageUrl] = useState('');
 
     const { id } = useParams();
     const token = getToken();
@@ -28,6 +31,11 @@ function UniquePost() {
         }
         fetchPost();
     }, [id]);
+    
+    const handleImageClick = (imageUrl) => {
+        setSelectedImageUrl(imageUrl);
+        setModalIsOpen(true);
+    };
 
     function deletePhoto(type, idType, image, token) {
         deleteUniquePhoto("post", post.data.id, image, token)
@@ -74,6 +82,7 @@ function UniquePost() {
                                     src={`${imgHost}${image}`}
                                     alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                     className="every-post-image"
+                                    onClick={() => handleImageClick(`${imgHost}${image}`)}
                                 />
                                 {token && (
                                     <button
@@ -89,6 +98,11 @@ function UniquePost() {
                     ) : (
                     <></>
                     )}
+                    <ImageModal
+                        isOpen={modalIsOpen}
+                        closeModal={() => setModalIsOpen(false)}
+                        imageUrl={selectedImageUrl}
+                    />
                 </div>
 
                 <div className="tour-video">

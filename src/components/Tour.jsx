@@ -5,11 +5,14 @@ import Loading from "./Loading.jsx";
 import Buttons from "./Edit-Delete-Btn.jsx";
 import CreateBtn from "./Create-Btn.jsx";
 import getToken from "../services/token/get-token.js";
+import ImageModal from './Image-Modal.jsx'; 
 const imgHost = import.meta.env.VITE_IMG_HOST;
 
 function Tour() {
     const [tour, setTour] = useState([]);
     const [expandedEntries, setExpandedEntries] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImageUrl, setSelectedImageUrl] = useState('');
 
     const token = getToken();
     useEffect(()=>{
@@ -23,6 +26,11 @@ function Tour() {
         }
         fetchTour()
     }, [])
+
+    const handleImageClick = (imageUrl) => {
+        setSelectedImageUrl(imageUrl);
+        setModalIsOpen(true);
+    };
 
     const toggleEntry = (tourDate) => {
         if (expandedEntries.includes(tourDate)) {
@@ -100,12 +108,18 @@ function Tour() {
                                                             src={`${imgHost}${image}`}
                                                             alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                                             className="every-post-image"
+                                                            onClick={() => handleImageClick(`${imgHost}${image}`)}
                                                         />
                                                         ) : null
                                                     )
                                                     ) : (
                                                     <></>
                                                     )}
+                                                    <ImageModal
+                                                        isOpen={modalIsOpen}
+                                                        closeModal={() => setModalIsOpen(false)}
+                                                        imageUrl={selectedImageUrl}
+                                                    />
                                                 </div>
                                                 <div className="tour-video">
                                                 {date.videoURL && date.videoURL.length > 0 ? (

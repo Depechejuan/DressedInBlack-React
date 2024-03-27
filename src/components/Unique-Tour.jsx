@@ -4,13 +4,15 @@ import getUniqueTour from "../services/get-unique-tour.js";
 import getToken from "../services/token/get-token.js";
 import deleteUniquePhoto from "../services/delete-unique-photo.js";
 import EditTourForm from "../forms/Tour-Edit.jsx";
-
+import ImageModal from './Image-Modal.jsx'; 
 const imgHost = import.meta.env.VITE_IMG_HOST;
 
 function UniqueTour() {
     const [tour, setTour] = useState({});
     const {id} = useParams();
     const token = getToken();
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [selectedImageUrl, setSelectedImageUrl] = useState('');
 
     useEffect(()=> {
         async function fetchTour() {
@@ -23,6 +25,11 @@ function UniqueTour() {
         }
         fetchTour();
     }, [id]);
+
+    const handleImageClick = (imageUrl) => {
+        setSelectedImageUrl(imageUrl);
+        setModalIsOpen(true);
+    };
 
     function deletePhoto(type, idType, image, token) {
         deleteUniquePhoto("tour", type, image, token)
@@ -69,6 +76,7 @@ function UniqueTour() {
                                     src={`${imgHost}${image}`}
                                     alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                     className="every-post-image"
+                                    onClick={() => handleImageClick(`${imgHost}${image}`)}
                                 />
                                 {token && (
                                     <button
@@ -84,6 +92,11 @@ function UniqueTour() {
                 ) : (
                     <></>
                 )}
+                <ImageModal
+                    isOpen={modalIsOpen}
+                    closeModal={() => setModalIsOpen(false)}
+                    imageUrl={selectedImageUrl}
+                />
             </div>
             <div className="tour-video">
                 {tour.videoURL && tour.videoURL.length > 0 ? (

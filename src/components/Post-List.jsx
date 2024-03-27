@@ -11,6 +11,7 @@ function PostList() {
     const [posts, setPosts] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImageUrl, setSelectedImageUrl] = useState('');
+    
     useEffect(() => {
         async function fetchPosts() {
             try {
@@ -26,8 +27,6 @@ function PostList() {
     const handleImageClick = (imageUrl) => {
         setSelectedImageUrl(imageUrl);
         setModalIsOpen(true);
-        console.log(selectedImageUrl);
-        console.log(modalIsOpen);
     };
 
     
