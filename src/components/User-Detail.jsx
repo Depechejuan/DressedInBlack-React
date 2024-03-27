@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import getUser from "../services/get-user.js";
 import Loading from "./Loading.jsx";
 import Divider from "./Divider.jsx";
-const host = import.meta.env.VITE_API_HOST;
+import Escri from "../assets/band/escri.jpg"
+import Javi from "../assets/band/javi.jpg"
+import Manu from "../assets/band/manu.jpg"
+import Luis from "../assets/band/luis.jpg"
+import Juan from "../assets/band/juan.jpg"
 
 function UserDetail() {
     const [user, setUser] = useState(null);
-
     useEffect(() => {
         async function fetchUser() {
             try {
@@ -33,7 +36,15 @@ function UserDetail() {
                     {u.realName}
                 </h4>
                 <figure className={`figure-${u.userName} figure-user`}>
-                    <img className={`user-photo-${u.userName} user-img`} src={`${host}/${u.avatarURL}`} alt={u.realName}></img>
+                <img
+                    className={`user-photo-${u.userName} user-img`}
+                    src={u.avatarURL.endsWith("escri.jpg") ? `${Escri}` :
+                        u.avatarURL.endsWith("juan.jpg") ? `${Juan}` :
+                        u.avatarURL.endsWith("javi.jpg") ? `${Javi}` :
+                        u.avatarURL.endsWith("luis.jpg") ? `${Luis}` :
+                        u.avatarURL.endsWith("manu.jpg") ? `${Manu}` : null}
+                    alt={u.realName}
+                />
                     <p className={`user-city-age city-${u.userName}`}>{u.city}</p>
                 </figure>
                 <section className={`user-info-${u.userName} user-section`}>
