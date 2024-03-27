@@ -65,7 +65,7 @@ function PostList() {
                                         src={`${host}${image}`}
                                         alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                         className="every-post-image"
-                                        onClick={() => handleImageClick(`${host}/${image}`)}
+                                        onClick={() => handleImageClick(`${host}${image}`)}
                                 />
                                 ) : null
                             )
