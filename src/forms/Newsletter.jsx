@@ -3,6 +3,7 @@ import newsTokken from '../services/token/newsletter-token';
 import tempToken from '../services/token/temp-nl-token';
 import getNewsToken from '../services/token/get-news-token';
 import sendNewsLetter from '../services/send-newsletter';
+import CitySelect from '../components/Cities';
 
 
 function Newsletter() {
@@ -52,8 +53,8 @@ function Newsletter() {
                     <button type="submit" className="ocultar-btn" onClick={handleHideButton} >
                         Ocultar
                     </button>
-                    <p>¡Suscríbete a nuestra Newsletter para estar al tanto de nuestros conciertos!</p>
-                    <div>
+                    <p className="newsletter-text">¡Suscríbete a nuestra Newsletter para estar al tanto de nuestros conciertos!</p>
+                    <div className="newsletter-container">
                         <input 
                             type="text"
                             name="email"
@@ -62,11 +63,9 @@ function Newsletter() {
                             onChange={handleChange}
                             required={!showComponent} 
                         />
-                        <input 
-                            type="text"
-                            name="city"
-                            value={formData.city}
-                            onChange={handleChange}
+                        <CitySelect 
+                            formData={formData}
+                            handleChange={handleChange}
                         />
                         <button type="submit" className="form-btn">
                             Suscribirse

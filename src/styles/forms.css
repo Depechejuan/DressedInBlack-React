@@ -20,12 +20,19 @@ form {
 }
 
 .newsletter {
-    width: 50%;
+    width: 90%;
+    max-width: 550px;
 }
 
-.newsletter input {
+.newsletter-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter-container > input {
     flex-direction: row;
-    width: 30%;
     margin-left: 10px;
 }
 
@@ -40,10 +47,11 @@ textarea,
 select {
     width: 80%;
     max-width: 100%;
-    margin: 0.5rem auto;
     padding: 10px;
     border: 1px solid #954545;
     border-radius: 5px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .youtube {
@@ -189,4 +197,15 @@ textarea {
     margin-left: auto;
     cursor: pointer;
     border-radius: 5px;
+    padding: 0.1rem;
+}
+
+@media (max-width: 550px) {
+    .newsletter-text {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .newsletter-container > input {
+        width: 80%;
+    }
 }

@@ -59,6 +59,7 @@ header {
     margin: 0 auto;
     object-position: center;
     position: sticky;
+    padding: 0 20px;
 }
 
 .banner {
