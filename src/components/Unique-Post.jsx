@@ -8,7 +8,7 @@ import Dates from "./Dates.jsx";
 import EditPost from "../forms/Edit-Post.jsx";
 import Loading from "./Loading.jsx";
 
-const host = import.meta.env.VITE_API_HOST;
+const imgHost = import.meta.env.VITE_IMG_HOST;
 
 function UniquePost() {
     const [post, setPost] = useState({});
@@ -71,7 +71,7 @@ function UniquePost() {
                             <>
                                 <img
                                     key={image.id}
-                                    src={`${host}/${image}`}
+                                    src={`${imgHost}${image}`}
                                     alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                     className="every-post-image"
                                 />

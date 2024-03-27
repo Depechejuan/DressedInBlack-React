@@ -6,7 +6,7 @@ import editPost from "../services/edit-post.js";
 import sendPhoto from "../services/send-photos.js";
 import deleteEntry from "../services/delete-entry.js";
 
-const host = import.meta.env.VITE_API_HOST;
+const imgHost = import.meta.env.VITE_IMG_HOST;
 
 const EditPost = ({ id, data, onHide, updatePost, post }) => {
     const [title, setTitle] = useState(data.title || "");
@@ -164,7 +164,7 @@ const EditPost = ({ id, data, onHide, updatePost, post }) => {
             {data.imageURL && data.imageURL.map((image) => (
                 <img
                 key={data.id}
-                src={`${host}${image}`}
+                src={`${imgHost}${image}`}
                 alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                 className="photo-preview"
                 />

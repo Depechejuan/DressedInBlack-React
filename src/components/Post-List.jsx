@@ -5,13 +5,12 @@ import Loading from "./Loading.jsx";
 import Dates from "./Dates.jsx";
 import ImageModal from './Image-Modal.jsx'; 
 
-const host = import.meta.env.VITE_API_HOST;
+const imgHost = import.meta.env.VITE_IMG_HOST;
 
 function PostList() {
     const [posts, setPosts] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImageUrl, setSelectedImageUrl] = useState('');
-
     useEffect(() => {
         async function fetchPosts() {
             try {
@@ -57,15 +56,14 @@ function PostList() {
                     <Dates date={post.createdAt} />
                     <p className="post-description">{post.description}</p>
                     <div className="image-container">
-                        {post && post.imageURL.some((image) => image !== null) ? (
-                            post.imageURL.map((image) =>
+                        {post && post.imageURL.some((image) => image !== null) ? (                            post.imageURL.map((image) =>
                                 image !== null ? (
                                     <img
                                         key={image.id}
-                                        src={`${host}${image}`}
+                                        src={`${imgHost}${image}`}
                                         alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
                                         className="every-post-image"
-                                        onClick={() => handleImageClick(`${host}${image}`)}
+                                        onClick={() => handleImageClick(`${imgHost}${image}`)}
                                 />
                                 ) : null
                             )
