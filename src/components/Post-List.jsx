@@ -55,25 +55,26 @@ function PostList() {
                     <Dates date={post.createdAt} />
                     <p className="post-description">{post.description}</p>
                     <div className="image-container">
-                        {post && post.imageURL.some((image) => image !== null) ? (                            post.imageURL.map((image) =>
-                                image !== null ? (
-                                    <img
-                                        key={image.id}
-                                        src={`${imgHost}${image}`}
-                                        alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
-                                        className="every-post-image"
-                                        onClick={() => handleImageClick(`${imgHost}${image}`)}
-                                />
-                                ) : null
-                            )
-                        ) : (
-                            <></>
-                        )}
-                        <ImageModal
-                            isOpen={modalIsOpen}
-                            closeModal={() => setModalIsOpen(false)}
-                            imageUrl={selectedImageUrl}
-                        />
+                    {post && post.imageURL ? (
+                        post.imageURL.map((image) =>
+                        image !== null ? (
+                            <img
+                            key={image.id}
+                            src={`${imgHost}${image}`}
+                            alt={`Dressed In Black - TRIBUTO a Depeche Mode de España`}
+                            className="every-post-image"
+                            onClick={() => handleImageClick(`${imgHost}${image}`)}
+                            />
+                        ) : null
+                        )
+                    ) : (
+                        null
+                    )}
+                    <ImageModal
+                        isOpen={modalIsOpen}
+                        closeModal={() => setModalIsOpen(false)}
+                        imageUrl={selectedImageUrl}
+                    />
                     </div>
 
 

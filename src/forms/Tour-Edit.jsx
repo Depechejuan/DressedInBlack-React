@@ -39,7 +39,7 @@ function EditTourForm({ tourData, id }) {
             setVenue(tourData.venue || '');
             setSoldOut(tourData.souldOut || true);
             setSetlist(tourData.setlist || '');
-            setYoutubeLinks(tourData.videoURL || [""]);
+            setYoutubeLinks(tourData.videoURL || []);
         }
     }, [tourData]);
 

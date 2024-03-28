@@ -16,7 +16,7 @@ function TourForm() {
     const [loading, setLoading] = useState(false);
     const [selectedPhotos, setSelectedPhotos] = useState([]);
     const [photoPreview, setPhotoPreview] = useState(null);
-    const [youtubeLinks, setYoutubeLinks] = useState([""]);
+    const [youtubeLinks, setYoutubeLinks] = useState([]);
     const [submitting, setSubmitting] = useState(false);
     const [cancelling, setCancelling] = useState(false);
     const navigate = useNavigate();

@@ -12,7 +12,7 @@ const EditPost = ({ id, data, onHide, updatePost, post }) => {
     const [title, setTitle] = useState(data.title || "");
     const [description, setDescription] = useState(data.description || "");
     const [loading, setLoading] = useState(false);
-    const [youtubeLinks, setYoutubeLinks] = useState(data.videoURL || [""]);
+    const [youtubeLinks, setYoutubeLinks] = useState(data.videoURL || []);
     const [selectedPhotos, setSelectedPhotos] = useState([]);
     const [submitting, setSubmitting] = useState(false);
     const [cancelling, setCancelling] = useState(false);
