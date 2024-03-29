@@ -19,7 +19,7 @@ async function sendMail(payload) {
         }
         return body;
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }
 

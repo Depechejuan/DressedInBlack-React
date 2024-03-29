@@ -20,11 +20,10 @@ function SendNewsLetter() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await sendMail(data);
+            await sendMail(data);
             navigate("/");
-            console.log(response);
         } catch(err) {
-            console.log(err);
+            console.error(err);
         }
     }
 
