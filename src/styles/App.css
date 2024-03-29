@@ -21,11 +21,6 @@
     box-sizing: border-box;
 }
 
-body,
-html {
-    height: 100%;
-}
-
 :root {
     font-size: 1rem;
     color: white;
@@ -46,19 +41,19 @@ body {
             #989898;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: center;
     align-items: center;
     width: 100vw;
     margin: 0 auto;
     object-position: center;
-    position: sticky;
+    /* position: sticky; */
 }
 
 header {
-    margin: 0 auto;
-    object-position: center;
-    position: sticky;
+    /* margin: 0 auto; */
+    /* object-position: center; */
+    /* position: sticky; */
     padding: 0 20px;
 }
 
@@ -130,4 +125,10 @@ ul {
 
 main > section:last-child {
     margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+    body {
+        height: 100vh;
+    }
 }

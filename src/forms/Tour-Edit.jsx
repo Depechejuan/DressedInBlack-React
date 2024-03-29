@@ -219,7 +219,7 @@ function EditTourForm({ tourData, id }) {
             ))}
             <div>
             <button type="button" onClick={handleAddMore} className="add-button">
-                Añadir más
+                Añadir Vídeo
             </button>
             {youtubeLinks.length > 1 && (
                 <button type="button" onClick={handleRemoveLast} className="remove-button">

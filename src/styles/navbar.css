@@ -52,7 +52,7 @@
     list-style-type: none;
 }
 
-.overlay {
+/* .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -61,7 +61,7 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 9998;
     display: none;
-}
+} */
 
 ul > li > a {
     text-decoration: none;
