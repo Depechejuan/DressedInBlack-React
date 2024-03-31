@@ -126,9 +126,3 @@ ul {
 main > section:last-child {
     margin-bottom: 60px;
 }
-
-@media (min-width: 1200px) {
-    body {
-        height: 100vh;
-    }
-}

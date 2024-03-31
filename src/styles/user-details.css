@@ -46,6 +46,10 @@ article {
     font-size: 3rem;
 }
 
+.bar {
+    margin-bottom: 4rem;
+}
+
 @media screen and (min-width: 700px) {
     /* 
     Special Details for Escri

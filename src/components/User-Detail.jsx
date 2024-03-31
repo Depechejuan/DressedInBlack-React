@@ -30,7 +30,7 @@ function UserDetail() {
     return(
         <>
         {user.data.map(u => (
-            <div className="users-about" key={user.id}>
+            <article className="users-about" key={user.id}>
             <article className={`user-${u.userName} user-article`} key={u.id}>
                 <h4 className="user-name">
                     {u.realName}
@@ -59,7 +59,7 @@ function UserDetail() {
                 </section>
             </article>
             <Divider />
-            </div>
+            </article>
         ))}
         </>
 
