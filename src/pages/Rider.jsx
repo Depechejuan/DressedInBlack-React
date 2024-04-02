@@ -28,7 +28,7 @@ function RiderPage() {
 
                 {/* Página 2 */}
                 {/* Indice */}
-                <div id="indice">
+                <section id="indice">
                     <h3 className="rider-main-title">Indice</h3>
                     <ul className="index-list">
                         <li><a href="#section-backline">1.- Nuestro Backline.</a></li>
@@ -37,7 +37,7 @@ function RiderPage() {
                         <li><a href="#section-req2">4.- Otros Requerimientos.</a></li>
                         <li><a href="#section-contact">5.- Contacto.</a></li>
                     </ul>
-                </div>
+                </section>
                 <Divider />
 
                 {/* Página 3 */}
@@ -45,10 +45,10 @@ function RiderPage() {
                     <h3 className="rider-main-title">Nuestro Backline</h3>
                     <h4 className="rider-sub-title">Electrónica</h4>
                     <ul>
-                        <li>M-Audio Oxygen 61 3rd Gen</li>
-                        <li>Software: Propellerheads Reason 10</li>
-                        <li>Macbook Pro 13</li>
-                        <li>Interfaz Audio Tascam Series 208i</li>
+                        <li><a href="https://www.m-audio.com/oxygen-v-61">M-Audio Oxygen 61 MKV</a></li>
+                        <li><a href="https://www.reasonstudios.com/reason">Software: Propellerheads Reason 10</a></li>
+                        <li><a href="https://support.apple.com/es-es/112003">Macbook Pro 13</a></li>
+                        <li><a href="https://tascam.com/amer-es/product/series_208i/top">Interfaz Audio Tascam Series 208i</a></li>
                     </ul>
 
                     <h4 className="rider-sub-title">Batería</h4>
@@ -60,12 +60,12 @@ function RiderPage() {
                         <li>Tom (x2)</li>
                         <li>Goliat</li>
                         <li>Cymbal (x2)</li>
-                        <li>Alesis SamplePad</li>
+                        <li><a href="https://www.unionmusical.es/016307-percusion-electronica-alesis-samplepad">Alesis SamplePad</a></li>
                         <li>Mixer Interno / Claqueta</li>
                     </ul>
                     <h5 className="list-title">Elementos opcionales</h5>
                     <ul className="eq-list">
-                        <li>Trigger</li>
+                        <li><a href="https://www.roland.com/es-es/products/rt-mics/">Trigger</a></li>
                         <li>Toms Adicionales</li>
                     </ul>
                     <aside className="additional-info">
@@ -74,8 +74,8 @@ function RiderPage() {
 
                     <h4 className="rider-sub-title">Guitarra</h4>
                     <ul>
-                        <li>Gibson Les Paul Classic</li>
-                        <li>Amplificador Fender Blues Junior</li>
+                        <li><a href="https://www.malaga8.com/gibson-les-paul-classic-hcs-p-32523.html">Gibson Les Paul Classic</a></li>
+                        <li><a href="https://www.fender.com/es-ES/amplificadores-para-guitarras/amplificadores-de-v%C3%A1lvulas-vintage-pro-para-guitarra/blues-junior-iv/2231506000.html">Amplificador Fender Blues Junior</a></li>
                         <li>Varios pedales de efectos </li>
                     </ul>
                     <p className="additional-info">
@@ -85,13 +85,13 @@ function RiderPage() {
                     <h4 className="rider-sub-title">Voz</h4>
                     <ul>
                         <li>Shure SM58</li>
-                        <li>Boss ve20 - Pedal de Efectos</li>
+                        <li><a href="https://www.boss.info/es-es/products/ve-20/">Pedal de Efectos Boss ve20</a></li>
                     </ul>
 
                     <h4 className="rider-sub-title">Bajo</h4>
                     <ul>
-                        <li>Ibanez SR300E</li>
-                        <li>Amplificador EBS Session 120</li>
+                        <li><a href="https://www.thomann.de/es/ibanez_sr300e_ipt.htm" rel="noopener noreferrer">Ibanez SR300E</a></li>
+                        <li><a href="https://www.musicstore.com/es_ES/EUR/EBS-Session-120-Combo/art-BAS0008708-000">Amplificador EBS Session 120</a></li>
                     </ul>
                 </section>
                 <Divider />

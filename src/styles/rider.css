@@ -71,3 +71,10 @@
 .index-list {
     font-size: 2rem;
 }
+
+/* .rider-container > .rider > section > ul > li {
+    color: #0074d9;
+} */
+.rider-container > .rider > section > ul > li > a {
+    color: #d8dbdd;
+}
