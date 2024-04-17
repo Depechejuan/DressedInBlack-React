@@ -68,7 +68,7 @@ ul > li > a {
     color: rgb(3, 50, 3);
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 900px) {
     .mobile-navbar {
         display: none;
     }
