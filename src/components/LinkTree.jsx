@@ -5,8 +5,9 @@ function LinkTree() {
         <section className="LinkTree">
             <h4>@Dressed In Black</h4>
             <h5>Más de 10 años rindiendo Tributo a Depeche Mode</h5>
-            <a className="btnStack" href="https://entradium.com">ENTRADAS ALBACETE</a>
+            <a className="btnStack" href="https://entradium.com">ENTRADAS SIDERAL, ALBACETE</a>
             <a className="btnStack" href="https://entradium.com/es/events/dressed-in-black-depeche-mode-tributo">ENTRADAS ROCK CHESTER BAR, ALICANTE</a>
+            <a className="btnStack" href="https://www.blacknoteclub.com/event-details/dressed-in-black-tributo-a-depeche-mode-2">ENTRADAS BLACK NOTE CLUB, VALENCIA</a>
             <a className="btnStack" href="https://enlace1.com">TOUR</a>
             <a className="btnStack" href="https://www.instagram.com/dressedinblackdm/">INSTAGRAM</a>
             <a className="btnStack" href="https://www.facebook.com/dressedinblackband/">FACEBOOK</a>
